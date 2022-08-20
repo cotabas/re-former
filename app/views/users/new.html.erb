@@ -25,20 +25,20 @@
   <%= email_field_tag(:email) %>
 
   <%= submit_tag("submit") %>
-
 <% end %>
 -->
 
-<%= form_with model: @user do |form| %>
-  <%= form.label "Username" %>
+<%= form_with model: User.new do |form| %>
+  <%= form.label :username, "Username" %>
   <%= form.text_field :username %>
 
-  <%= form.label "Password" %>
+  <%= form.label :password, "Password" %>
   <%= form.password_field :password %>
 
-  <%= form.label "E-mail" %>
-  <%= form.email_field :email %>
+  <%= form.label :email, "E-mail" %>
+  <%= form.email_field :email, placeholder: "example@cptmo.dev" %>
 
   <%= form.submit "Submit" %>
 
 <% end %>
+
